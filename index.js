@@ -3,10 +3,9 @@ module.exports = {
     website: {
         assets: "./book",
         js: [
-            "test.js"
+            "anker.js"
         ],
         css: [
-            "test.css"
         ],
         html: {
             "html:start": function() {
