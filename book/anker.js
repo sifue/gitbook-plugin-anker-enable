@@ -4,9 +4,7 @@ require(["gitbook"], function(gitbook) {
         if (location.hash) {
             // deley for other event
             setTimeout(function(){
-                // for Chrome
-                $('.book-body').scrollTop($(location.hash).offset().top);
-                // for Firefox
+                // wait for loading
                 document.location = location.hash;
             }, 300);
         }
