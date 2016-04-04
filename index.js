@@ -1,56 +1,18 @@
 module.exports = {
-    // Extend website resources and html
-    website: {
-        assets: "./book",
-        js: [
-            "anker.js"
-        ],
-        css: [
-        ],
-        html: {
-            "html:start": function() {
-                return "<!-- Start book "+this.options.title+" -->"
-            },
-            "html:end": function() {
-                return "<!-- End of book "+this.options.title+" -->"
-            },
+  // Extend website resources and html
+  website: {
+    assets: './book',
+    js: [
+      'anker.js'
+    ],
+    css: [
+    ],
+    html: {}
+  },
 
-            "head:start": "<!-- head:start -->",
-            "head:end": "<!-- head:end -->",
+  blocks: {},
 
-            "body:start": "<!-- body:start -->",
-            "body:end": "<!-- body:end -->"
-        }
-    },
+  filters: {},
 
-    // Extend templating blocks
-    blocks: {
-        // Author will be able to write "{% myTag %}World{% endMyTag %}"
-        // myTag: {
-        //     process: function(blk) {
-        //         return "Hello "+blk.body;
-        //     }
-        // }
-    },
-
-    // Extend templating filters
-    filters: {
-        // Author will be able to write "{{ 'test'|myFilter }}"
-        // myFilter: function(s) {
-        //     return "Hello "+s;
-        // }
-    },
-
-    // Hook process during build
-    hooks: {
-        // For all the hooks, this represent the current generator
-
-        // This is called before the book is generated
-        "init": function() {
-        },
-
-        // This is called after the book generation
-        "finish": function() {
-        }
-    }
+  hooks: {}
 };
